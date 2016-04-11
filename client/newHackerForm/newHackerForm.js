@@ -1,3 +1,5 @@
+Meteor.subscribe('hackers');
+
 Template.newHackerForm.events({
   'submit #hackerForm' : function(event, template) {
 
@@ -15,8 +17,9 @@ Template.newHackerForm.events({
       allegiance: allegiance
     }
 
-    Hackers.insert(newHacker);
-      alert('Added: ${newHacker.legalName} (${newHacker.hackerName})');
+    Hackers.insert(newHacker, function () {
+      alert("OPERATION SUCCESSFUL.");
+    });
   }
 
 });
