@@ -5,6 +5,6 @@ Template.hackerList.helpers({
 
 }); 
 
-Template.hackerList.OnCreated(function(){
+Template.hackerList.onCreated(function(){
 	Meteor.subsribe('hackers')
 	});
