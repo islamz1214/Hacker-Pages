@@ -6,5 +6,6 @@ Template.hackerList.helpers({
 });
 
 Template.hackerList.onCreated(function(){
-	Meteor.subsribe('hackers')
+  console.info("Subbing to Hackers");
+	Meteor.subscribe('hackers');
 	});
