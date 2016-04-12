@@ -1,7 +1,10 @@
 
 Template.hackerList.helpers({
-    'Hackers':function (){
+    'Hackers':function() {
       return Hackers.find();
+    },
+    'createdByUserId':function() {
+    	return this.createdBy === Meteor.userId();
     }
 });
 

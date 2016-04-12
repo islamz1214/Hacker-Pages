@@ -8,12 +8,14 @@
 
   <div class="row">
     <div class="col-xs-4 col-xs-offset-4">
+      {{ #if createsByUser }}
       {{ #each Hackers }}
         <h4>{{ hackerName }}</h4>
         <p><strong>Legal Name:</strong> {{ legalName }}</p>
         <p><strong>Email:</strong> {{ email }}</p>
         <br />
       {{ /each }}
+      {{ /if }}
     </div>
   </div>
 </template>
